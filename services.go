@@ -1,5 +1,7 @@
 package ManageServer
 
+import "fmt"
+
 type (
 	// Service - service  control
 	Service interface {
@@ -23,6 +25,7 @@ type (
 func (sw *ServiceWatcher) InitServices() error {
 
 	for _, serv := range sw.Services {
+		fmt.Println(serv.Name())
 		err := serv.Init()
 		if err != nil {
 			return err
