@@ -35,6 +35,6 @@ func (sw *ServiceWatcher) InitServices() error {
 }
 
 // AddService - add type Service
-func (sw *ServiceWatcher) AddService(s *Service) {
-	sw.Services = append(sw.Services, *s)
+func (sw *ServiceWatcher) AddService(s Service) {
+	sw.Services = append(sw.Services, s)
 }
