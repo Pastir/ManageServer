@@ -33,3 +33,8 @@ func (sw *ServiceWatcher) InitServices() error {
 	}
 	return nil
 }
+
+// AddService - add type Service
+func (sw *ServiceWatcher) AddService(s *Service) {
+	sw.Services = append(sw.Services, *s)
+}
